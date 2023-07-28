@@ -1,0 +1,16 @@
+.no-border {
+  border: 0;
+}
+
+.img-card {
+  height: 250px;
+  width: 400px;
+  object-fit: cover;
+}
+
+.member-link {
+  color: dimgray !important;
+  text-decoration: none;
+} .member-link:hover {
+    text-decoration: underline;
+  }

@@ -1,0 +1,33 @@
+<ng-container *ngIf="member">
+  <div class="card no-border">
+    <h3>Member {{member.PersonID}}</h3>
+    <img src="{{ member.PhotoURL | photo:member.GenderTypeID }}" class="img-fluid img-card" alt="">
+    <div class="card-body">
+      <h3 class="card-title">{{ member.ParliamentaryName | name }}</h3>
+      <ng-container *ngIf="member.BirthDateIsProtected">
+        <p class="card-text"><small class="text-muted">Birthdate not available</small></p>
+      </ng-container>
+      <ng-container *ngIf="member.BirthDate">
+        <p class="card-text text-muted">{{ member.BirthDate | date:'mediumDate' }}</p>
+      </ng-container>
+      <hr>
+      <ng-container *ngIf="party">
+        <h5>Party:</h5>
+        <ul>
+          <li>
+            <p class="card-text">{{ party.PreferredName }}</p>
+          </li>
+        </ul>
+      </ng-container>
+      <hr>
+      <ng-container *ngIf="websites.length != 0">
+        <h5>Websites:</h5>
+        <ul *ngFor="let website of websites">
+          <li>
+            <a class="member-link" href="{{ website.WebURL }}" target="_blank">{{ website.WebURL }}</a>
+          </li>
+        </ul>
+      </ng-container>
+    </div>
+  </div>
+</ng-container>

@@ -1,0 +1,7 @@
+<ng-container *ngIf="members">
+  <div class="row">
+    <ng-container *ngFor="let member of members">
+      <app-member-card [member]=member class="col-md-4 p-2"></app-member-card>
+    </ng-container>
+  </div>
+</ng-container>

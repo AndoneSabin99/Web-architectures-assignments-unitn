@@ -1,0 +1,8 @@
+<div class="card text-center no-border shadow-sm">
+  <img src="{{ member.PhotoURL | photo:member.GenderTypeID }}" class="img-card">
+  <div class="card-body">
+    <a class="member-link" [routerLink]="['../member']" [queryParams]="{id: member.PersonID}">
+      <h6>{{ member.ParliamentaryName | name }}</h6>
+    </a>
+  </div>
+</div>
