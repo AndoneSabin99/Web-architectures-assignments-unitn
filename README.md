@@ -2,6 +2,14 @@
 
 Assignments from the Web Architectures course at Unitn.
 
+Requirements
+
+*  JDK 15
+* Apache Tomcat
+* H2 DBMS
+* Wildfly
+
+
 List
 
 1. Dynamic website without using Web Languages
